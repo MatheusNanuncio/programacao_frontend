@@ -6,55 +6,147 @@
     <title>Gestão de Acessos</title>
 </head>
 <body>
-    <h1>Gestão de Acessos</h1>
-    <p>Essa página serve para indexar os links dos formulários para gestão de acessos.</p>
-    <div class="imagem">
-        <img src="https://centric.com.br/wp-content/uploads/2021/10/50076_Centric_Artigo22_capablog.png" width="900" />
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(140 140 140);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        caption {
+            caption-side: bottom;
+            padding: 10px;
+            font-weight: bold;
+        }
+        thead,
+        tfoot {
+            background-color: rgb(228 240 245);
+        }
+        th,
+        td {
+            border: 1px solid rgb(160 160 160);
+            padding: 8px 10px;
+        }
+        td:last-of-type {
+            text-align: center;
+        }
+        tbody > tr:nth-of-type(even) {
+            background-color: rgb(237 238 242);
+        }
+        tfoot th {
+            text-align: right;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+
+    </style>
+
+
+    <div id="header">
+        <h1>Apresentação de listas e tabelas em HTML</h1>
+        <div class="imagem">
+            <img src="https://centric.com.br/wp-content/uploads/2021/10/50076_Centric_Artigo22_capablog.png" width="800" />
+        </div>
     </div>
-
-    <h4>Exemplo de lista no formato "ul"</h4>
-    <ul>
-        <li>Primeiro item</li>
-        <li>Segundo item</li> 
-        <li>Terceiro item</li> 
-        <li>Quarto item</li> 
-    </ul>
-
-    <h4>Exemplo de lista no formato "ul" com sub-item</h4>
-    <ul>
-        <li>Primeiro item</li>
-            <ul>
-                <li>Sub-item</li>
-                    <ol>
-                        <li>Primeiro</li>
-                        <li>Segundo</li>    
-                    </ol>                                      
-                <li>Sub-item</li>
-            </ul>
-        <li>Segundo item</li>
-        <ul>
-            <li>Sub-item</li>
-            <li>Sub-item</li>
-        </ul> 
-        <li>Terceiro item</li> 
-             <ul>
-                <li>Sub-item</li>
-                <li>Sub-item</li>
-            </ul>
-        <li>Quarto item</li>
-             <ul>
-                <li>Sub-item</li>
-                <li>Sub-item</li>
-            </ul>
-    </ul>
-
-    <h4>Exemplo de lista no formato "ol"</h4>
-    <ol>
-        <li>Primeiro item</li>
-        <li>Segundo item</li> 
-        <li>Terceiro item</li> 
-        <li>Quarto item</li>
-    </ol>
-        
+    <div id="content">
+        <div class="introducao">
+            <p>Nesta página iremos apresentar e exemplificar quais são os tipos de listas disponíveis em HTML e suas devidas funções</p>
+        </div>
+        <div class="post">
+            <div class="listas">
+                <h4><span>Exemplo de lista no formato "ul"</span></h4>
+                <ul>
+                    <li>Primeiro item</li>
+                    <li>Segundo item</li> 
+                    <li>Terceiro item</li> 
+                    <li>Quarto item</li> 
+                </ul>                 
+                <h4><span>Exemplo de lista no formato "ul" com sub-item</span></h4>
+                <ul>
+                    <li>Primeiro item</li>
+                        <ul>
+                            <li>Sub-item</li>
+                                <ol>
+                                    <li>Primeiro</li>
+                                    <li>Segundo</li>    
+                                </ol>                                      
+                            <li>Sub-item</li>
+                        </ul>
+                    <li>Segundo item</li>
+                    <ul>
+                        <li>Sub-item</li>
+                        <li>Sub-item</li>
+                    </ul> 
+                    <li>Terceiro item</li> 
+                         <ul>
+                            <li>Sub-item</li>
+                            <li>Sub-item</li>
+                        </ul>
+                    <li>Quarto item</li>
+                         <ul>
+                            <li>Sub-item</li>
+                            <li>Sub-item</li>
+                        </ul>
+                </ul>
+                <h4><span>Exemplo de lista no formato "ol"</span></h4>
+                <ol>
+                    <li>Primeiro item</li>
+                    <li>Segundo item</li> 
+                    <li>Terceiro item</li> 
+                    <li>Quarto item</li>
+                </ol>
+            </div>
+            <div class="tabelas">                
+                <h4><span>Exemplo do uso de tabela</span></h4>
+                <table>
+                    <caption>
+                        Média de Idade Turma
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Pessoa</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Moradia</th>                            
+                        </tr>                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Matheus</th>
+                            <td>21</td>
+                            <td>Maringá</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Jhonatan</th>
+                            <td>19</td>
+                            <td>Astorga</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Henrique</th>
+                            <td>19</td>
+                            <td>Cianorte</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">Média de Idade</th>
+                            <td>19</td>
+                        </tr>
+                    </tfoot>                
+                </table>
+            </div>           
+        </div>
+    </div>
+    <div id="footer">
+        <h6>Uma apresentação de Matheus Henrique Nanuncio</h6>
+    </div>    
 </body>
 </html>
